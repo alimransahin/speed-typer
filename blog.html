@@ -63,17 +63,33 @@
             <h2 class="accordion-header" id="headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Accordion Item #3
+                    How to work event loop in javascript?
                 </button>
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
-                    plugin adds the appropriate classes that we use to style each element. These classes control the overall
-                    appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
-                    custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
-                    within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    The <strong>event loop</strong> is a mechanism that allows JavaScript to perform non-blocking operations. When an asynchronous task is
+                    started, the event loop will start running. Once the task is completed, the event loop will again check for any other tasks that need to be performed.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Different ways you will get undefined
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  We get undefined from different ways.
+                  1. variable define but uninitialized.
+                  2. No return from Function.
+                  3. When we don't pass parameter in the function.
+                  4. When we don't set return Value. 
+                  5. Access property that does not exists of ana array.  
                 </div>
             </div>
         </div>
