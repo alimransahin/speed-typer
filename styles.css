@@ -96,6 +96,20 @@ body {
 .hidden {
   display: none;
 }
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.blog {
+  color: #fff;
+  background-color: #eb6565;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
 .title {
   text-align: center;
   color: white;
@@ -127,7 +141,7 @@ body {
   justify-content: center;
   margin: 30px 0;
 }
-button {
+.button {
   padding: 10px 20px;
   border: none;
   font-size: 16px;
@@ -151,6 +165,8 @@ button {
   width: 30%;
   height: 100%;
   padding: 50px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   justify-content: space-between;
   align-items: center;
@@ -183,6 +199,7 @@ button {
 .p-1{
 padding-bottom: 5px;
 }
+
 
 @media only screen and (max-width: 700px) {
   .box-container {

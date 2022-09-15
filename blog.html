@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speed Monster</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+
+<body class="container">
+    <header>
+        <div class="header">
+            <h1 class="title"><img src="./logo.png" /></h1>
+            <a class="blog" href="index.html">Home</a>
+        </div>
+    </header>
+    <main class="mt-5">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    What is the difference between local storage and session storage?
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    The data stored in <strong>localStorage </strong> persists until explicitly deleted. Changes made are saved and available for all current
+                    and future visits to the site.<br><br>
+                    
+                    For <strong>sessionStorage</strong>, changes are only available per tab. Changes made are saved and available for the current page in
+                    that tab until it is closed. Once it is closed, the stored data is deleted.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    What is the difference between global scope and local scope in JavaScript?
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    JavaScript variables have only two scopes.<br><br> 
+                    <strong>Global Variables</strong> − A global variable has a global scope which means it can be defined anywhere in your JavaScript code. <br><br>
+                    
+                    <strong>Local Variables</strong> − A local variable will be visible only within a function where it is defined. <br>
+                    Function parameters are always local to that function.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Accordion Item #3
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
+                    plugin adds the appropriate classes that we use to style each element. These classes control the overall
+                    appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                    custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
