@@ -148,10 +148,10 @@ button {
 }
 
 .card {
-  width: 100%;
+  width: 30%;
   height: 100%;
   padding: 50px;
-  display: flex;
+  text-align: center;
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
@@ -180,6 +180,9 @@ button {
   position: fixed;
   top: 0;
 }
+.p-1{
+padding-bottom: 5px;
+}
 
 @media only screen and (max-width: 700px) {
   .box-container {
@@ -188,5 +191,6 @@ button {
   }
   .card {
     flex-direction: column;
+    width: 100%;
   }
 }
