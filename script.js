@@ -8,6 +8,7 @@ const modalBackground = document.getElementById("modal-background");
 // variables
 let userText = "";
 let errorCount = 0;
+let wordCount = 0;
 let startTime;
 let questionText = "";
 
@@ -44,11 +45,13 @@ const typeController = (e) => {
 
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
+    if(newLetter===" "){
+      wordCount++;
+    }
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
     errorCount++;
   }
-
   // check if given question text is equal to user typed text
   if (questionText === userText) {
     gameOver();
@@ -69,7 +72,6 @@ const gameOver = () => {
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
   const timeTaken = Math.round((finishTime - startTime) / 1000);
-
   // show result modal
   resultModal.innerHTML = "";
   resultModal.classList.toggle("hidden");
@@ -79,19 +81,22 @@ const gameOver = () => {
   // make it inactive
   display.classList.add("inactive");
   
-  // show result
+  const typingSpeed = Math.round(((wordCount+1) * 60) / timeTaken);
+   // show result
   resultModal.innerHTML += `
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
+    <p>Your typing speed: <span class="bold">${typingSpeed}</span> WpM</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;
 
-  addHistory(questionText, timeTaken, errorCount);
+  addHistory(questionText, timeTaken, errorCount, typingSpeed);
 
   // restart everything
   startTime = null;
   errorCount = 0;
+  typingSpeed = 0;
   userText = "";
   display.classList.add("inactive");
 };
